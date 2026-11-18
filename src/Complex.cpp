@@ -33,20 +33,25 @@ return Complex(real+other.real,imag+other.imag);
 // TODO(5): 复数相减
 Complex Complex::operator-(const Complex& other) const {
      // 占位，实现后删掉
-return Complex(real-other.real,imag-other.imag)
+return Complex(real-other.real,imag-other.imag);
 }
 
 // TODO(6): 按约定格式打印
 void Complex::print() const {
-    cout << "TODO" << endl;
+if (imag>=0){
+    cout <<real<<"+"<<imag<<"i" << endl;
 }
-
+else
+{
+cout <<real<<"-"<<-imag<<"i" << endl;
+}
+}
 // TODO(7)
 double Complex::getReal() const {
-    return 0;  // 占位
+    return real;  // 占位
 }
 
 // TODO(8)
 double Complex::getImag() const {
-    return 0;  // 占位
+    return imag;  // 占位
 }
